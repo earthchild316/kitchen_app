@@ -1,0 +1,32 @@
+<div class="kitchen">
+
+  <table>
+    <thead>
+      <tr>
+        <th class="row1 row-item">Item</th>
+        <th class="row2 row-category">Category</th>
+        <th class="row3 row-ideal">Ideal Stock</th>
+        <th class="row4 row-stock">Current Stock</th>
+        <th class="row5 row-total">Required</th>
+        <th class="row6 row-advice">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% sorted_items = Item.sort_all_items  %>
+
+      <% sorted_items.each do |item| %> 
+
+      <tr class="notfirst">
+        <td class="row1 row-item"><%= item.item_name %></td>
+        <td class="row2 row-category"><%= Category.find(item.category_id).name %></td> 
+        <td class="row3 row-ideal"><%= item.ideal_stock %></td>
+        <td class="row4 row-stock"><%=item.current_stock   %></td>
+        <td class="row5 row-total"><%= item.check_stock_level %></td> 
+        <td class="row6 row-advice"><%= item.webpage_output(item.check_stock_level) %></td> 
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

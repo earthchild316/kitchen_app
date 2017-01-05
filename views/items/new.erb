@@ -1,0 +1,40 @@
+<h3>Create new Item:</h3>
+
+<div class="kitchen">
+
+<form action="/items" method="post">
+
+  <label for="title">Title: </label>
+  <input type="text" name="title"></input>
+
+<br>
+<br>
+
+
+<label for="ideal_stock">Ideal Stock:</label>
+<input type="number" name="stock_level" value="0">
+
+<br>
+<br>
+
+<label for="stock_level">Stock Level:</label>
+<input type="number" name="buy_price" value="0">
+
+<br>
+<br>
+
+  
+<label for="category_id">By: </label>
+  <select name="category_id">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %> "><%= category.name %></option>
+    <% end %>
+  </select>
+
+<br>
+<br>
+
+<input type='submit' value="Create Item">
+
+</form>
+</div>

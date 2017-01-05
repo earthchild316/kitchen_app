@@ -1,0 +1,193 @@
+/** font **/
+
+body {
+  font-family: 'Vesper Libre', sans-serif;
+  margin: 0px;
+}
+
+
+
+/** heading **/
+
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0 ;
+  width: 100%;
+  border-bottom: 10px solid #FFB933;
+  margin-bottom: 60px;
+}
+
+
+#logo {
+  float: left;
+  margin-left: 5%;
+  text-align: left;
+  font-size: 80%
+  width: 25%;
+}
+
+
+
+h1 {
+  font-family: 'Permanent Marker', sans-serif;
+  margin: 15px 0 5px 0;
+  font-size: 2.5em;
+  font-weight: normal;
+  line-height:: 0.8em;
+}
+
+h2 {
+  margin: 0 0 0 ;
+  font-weight: normal;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+
+
+/** nav **/
+
+nav {
+  font-family: 'Permanent Marker', sans-serif;
+  background: none;
+  float: right;
+  font-size: 1.125em;
+  margin-right: 5%;
+  text-align: right;
+  width: 35%;
+}
+
+nav {
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0 0 ;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 800;
+  padding: 15px 10px;
+}
+
+#kitchen-list li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+h3 {
+  padding: 0 4%;
+}
+
+h4{
+  text-align: center;
+}
+
+
+/*** Colours  ***/
+
+/* site body */
+body{
+  background-color: #27C2B2;
+  color: #fff
+}
+
+/*  header */
+header {
+  background: #27C2B2;
+}
+
+/* logo text */
+h1, h2 {
+  color: #fff;
+}
+
+/* links */
+a {
+  color: #f1f2f0;
+  text-decoration: none;
+}
+
+b {
+  color: #FFB933;
+  text-decoration: none;
+}
+
+/* nav link */
+nav a, nav a:visited {
+  color: #fff;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #FFB933;
+}
+
+/*page layout*/
+
+div.kitchen {
+  padding: 0 4%;
+}
+
+
+/*table layout*/
+
+table{
+  border: 1px solid #FFF;
+  width: 95%;
+}
+
+th, td {
+  border: 1px solid #FFF;  
+  padding: 15px;
+}
+
+/*th {
+  background-color: #560e51;
+  color: #cc5000;
+}*/
+
+.edit_link{
+  color: #FFB933;
+}
+
+.notfirst:hover{
+  background-color:#00887A;
+  color: #FFB933;
+
+}
+
+.row-title{
+  width: 35%;
+}
+
+.row-artist {
+width: 20%;
+}
+
+.row-stock {
+  text-align: center;
+}
+
+.row-buy {
+  text-align: center;
+}
+
+.row-sell {
+  text-align: center;
+}
+
+.row-markup {
+  text-align: center;
+}

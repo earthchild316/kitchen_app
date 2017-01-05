@@ -1,0 +1,32 @@
+<div class="kitchen">
+
+  <table>
+    <thead>
+      <tr>
+        <th class="row1 row-item">Item</th>
+        <th class="row2 row-ideal_stock">Ideal Stock Level</th>
+        <th class="row3 row-current_stock ">Current Stock Level</th>
+        <th class="row4 row-category">Category</th>
+        <th class="row5 row-edit"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+  <% sorted_items = @items.sort { |a, b| [b.category_id, a.item_name] <=> [a.category_id, b.item_name] } %>
+
+  <% sorted_items.each do |item| %>
+
+  <tr class="notfirst">
+    <td class="row1 row-item"><%= item.item_name %></td>
+    <td class="row2 row-ideal_stock"><%= item.ideal_stock%></td> 
+    <td class="row3 row-current_stock"><%= item.current_stock %></td> 
+    <td class="row4 row-category"><%= Category.find(item.category_id).name%></td> 
+    <td class="row5 row-edit"><a href="/items/<%= item.id %>/edit" class="edit_link"> Edit </a></td> 
+
+  </tr>
+
+
+<% end %>
+
+<a href="/items/new">Add a new item</a>
+</div>

@@ -1,0 +1,43 @@
+<div class="kitchen">
+
+  <h4>Click any category to see it's items.</h4>
+
+
+  <table>
+    <tbody>
+      
+      <% ctr = 1 %>
+
+      <% @categories.each do |cat| %>
+      
+      <% if ctr==4 %>
+      <td class="row1">
+      <a href="/items/cat/<%= cat.id %>"><%= cat.name  %></a></td>
+            </TD><TR>
+            <% ctr=1 %>
+          <% else %>
+       <td class="row1">
+      <a href="/items/cat/<%= cat.id %>"><%= cat.name  %></a></td>
+            <% ctr +=1 %>
+            </TD>
+          <% end %>
+
+
+      <% end %>
+
+    </tbody>
+  </table>
+
+
+ 
+  <br>
+  
+  <hr>
+
+
+
+<br>
+<br>  
+
+<a href="/items/new">Add a new item</a>
+</div>

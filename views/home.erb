@@ -1,0 +1,25 @@
+<div class="kitchen">
+
+  <table>
+    <thead>
+      <tr>
+        <th class="row1 row-item">Item</th>
+        <th class="row2 row-category">Category</th>
+        <th class="row3 row-status">Required Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% sorted_items = Item.sort_filtered_items %>
+      <% sorted_items.each do |item| %> 
+
+      <tr class="notfirst">
+        <td class="row1 row-item"><%= item.item_name %></td>
+        <td class="row2 row-category"><%= Category.find(item.category_id).name %></td> 
+        <td class="row3 row-status"><%= item.check_stock_level %></td> 
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

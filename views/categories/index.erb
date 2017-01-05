@@ -1,0 +1,19 @@
+<h3>Categories</h3>
+
+<div class="kitchen">
+
+  <h4>Click any category to edit</h4>
+
+  <% @categories.each do |category| %>
+
+  <b>Categories: </b>
+  <a href="/categories/<%= category.id %>/edit"><%= category.name %></a>
+
+  <hr>
+
+
+  <% end %>
+
+
+  <a href="/categories/new">Add a new category</a>
+</div>
